@@ -8,9 +8,9 @@ if os.path.isfile(f_name):
     if num_line <= len(lines):
         print(lines[num_line - 1])
     else:
-        print('This line does not exist')
+        print('Строка не существует')
 
     f.close()
 
 else:
-    print('File is not found')
+    print('Файл не существует')
