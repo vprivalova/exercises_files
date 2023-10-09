@@ -1,7 +1,5 @@
-f1 = open('input.txt', 'r')
-f2 = open('output.txt', 'w')
-
-numbers = f1.readlines()
+with open('input.txt', 'r') as f1:
+    numbers = f1.readlines()
 
 try:
     num1 = int(numbers[0])
@@ -16,7 +14,5 @@ except ValueError:
     print('Входные данные должны быть целыми числами')
 
 else:
-    f2.write(str(division + num3))
-
-f1.close()
-f2.close()
+    with open('output.txt', 'w') as f2:
+        f2.write(str(division + num3))
