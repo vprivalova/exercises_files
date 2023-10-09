@@ -1,7 +1,11 @@
-f1 = open('input.txt', 'r')
-f2 = open('output.txt', 'w')
+# import random
+# with open('input.txt', 'w') as f1:
+#     for i in range(365):
+#         f1.write(str(random.randint(100, 30000))+'\n')
 
-lines = f1.readlines()
+
+with open('input.txt', 'r') as f1:
+    lines = f1.readlines()
 
 months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 steps = 0
@@ -9,20 +13,18 @@ avg = 0
 p_begin = 0
 p_end = 0
 
-for i in range(12):
-    p_begin = p_end
-    p_end = p_end + months[i]
+with open('output.txt', 'w') as f2:
+    for i in range(12):
+        p_begin = p_end
+        p_end = p_end + months[i]
 
-    period = lines[p_begin:p_end]
+        period = lines[p_begin:p_end]
 
-    for j in range(months[i]):
-        steps = steps + int(period[j])
+        for j in range(months[i]):
+            steps = steps + int(period[j])
 
-    avg = steps / months[i]
-    f2.write(str(round(avg)) + '\n')
+        avg = steps / months[i]
+        f2.write(str(round(avg)) + '\n')
 
-    steps = 0
-    avg = 0
-
-f1.close()
-f2.close()
+        steps = 0
+        avg = 0
