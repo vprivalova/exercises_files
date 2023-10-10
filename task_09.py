@@ -14,16 +14,16 @@ p_begin = 0
 p_end = 0
 
 with open('output.txt', 'w') as f2:
-    for i in range(12):
+    for index in range(12):
         p_begin = p_end
-        p_end = p_end + months[i]
+        p_end = p_end + months[index]
 
         period = lines[p_begin:p_end]
 
-        for j in range(months[i]):
-            steps = steps + int(period[j])
+        for index2 in range(months[index]):
+            steps = steps + int(period[index2])
 
-        avg = steps / months[i]
+        avg = steps / months[index]
         f2.write(str(round(avg)) + '\n')
 
         steps = 0

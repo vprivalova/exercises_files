@@ -26,5 +26,5 @@ for r_key in frequency:
 result_words.sort()
 
 with open('output.txt', 'w') as f2:
-    for elem in result_words:
-        f2.write(elem + ' - частота вхождений: ' + str(frequency[elem]) + '\n')
+    for result in result_words:
+        f2.write(result + ' - частота вхождений: ' + str(frequency[result]) + '\n')

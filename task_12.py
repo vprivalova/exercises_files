@@ -12,7 +12,7 @@ with open('index.html', 'w') as f_html:
     f_html.write('</head>')
     f_html.write('<body>')
     f_html.write('<h1>' + h1 + '</h1>')
-    for elem in p:
-        f_html.write('<p>' + elem + '</p>')
+    for paragraph in p:
+        f_html.write('<p>' + paragraph + '</p>')
     f_html.write('</body>')
     f_html.write('</html>')

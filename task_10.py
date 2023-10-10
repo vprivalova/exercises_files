@@ -5,9 +5,9 @@ with open('input.txt', 'r') as f1:
 
 result = []
 
-for i in range(len(lines)):
-    if (i + 1) % 2 == 0:
-        result.append(lines[i])
+for index in range(len(lines)):
+    if (index + 1) % 2 == 0:
+        result.append(lines[index])
 
 os.mkdir('simple')
 os.chdir('simple')
